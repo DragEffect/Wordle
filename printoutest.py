@@ -40,7 +40,7 @@ def main():
         else:
             casevar = reader.readlines(x)
             caselast = casevar[-1]
-            choice = caselast.strip('\n') #getting the computers choice of words
+            choice = caselast.strip('\n') 
     for m in range (wordsize):
         #function to get the guess from the user
         guess = get_guess(wordsize)
@@ -50,7 +50,7 @@ def main():
             status.append(WRONG)
         score = check_word(guess, wordsize, status, choice)
 
-        print(f"Guess {m}:")
+        print(f"Guess {m+1}:")
 
         print_word(guess, wordsize, status)
 
