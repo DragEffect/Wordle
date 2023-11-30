@@ -16,7 +16,11 @@ WRONG = 0
 
 def main():
 #getting the size of the choice
-    argument = int(input("Enter the wordsize from 5 to 8: "))
+    try:
+        argument = int(input("Enter the wordsize from 5 to 8: "))
+    except:
+        print("Error: wordsize must be either 5, 6, 7, or 8")
+        return 1
     if(argument == 5):
         wordsize = 5
     elif(argument == 6):
@@ -50,7 +54,7 @@ def main():
             status.append(WRONG)
         score = check_word(guess, wordsize, status, choice)
 
-        print(f"Guess {m}:")
+        print(f"Guess {m+1}:")
 
         print_word(guess, wordsize, status)
 
