@@ -74,7 +74,7 @@ def get_guess(wordsize):
 
     while(len(guess)!=wordsize):
         guess = input("Input a " + str(wordsize) + "-letter word: ")
-    return guess
+    return guess.lower()
 
 
 def check_word(guess, wordsize, status, choice):
